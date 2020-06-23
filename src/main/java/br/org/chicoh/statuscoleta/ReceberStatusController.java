@@ -1,6 +1,7 @@
 package br.org.chicoh.statuscoleta;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,7 +12,7 @@ import br.org.chicoh.statuscoleta.dto.ResponseStatusColetaDTO;
 @RestController
 public class ReceberStatusController {
 
-	@GetMapping("/receber-status-coleta")
+	@PostMapping("/receber-status-coleta")
 	public ResponseStatusColetaDTO receberStatusColeta(
 			@RequestHeader(name = "chave1", required = false) String chave1,
 			@RequestHeader(name = "valor1", required = false) String valor1,
